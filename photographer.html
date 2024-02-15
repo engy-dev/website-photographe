@@ -1,37 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <meta content="width=device-width,initial-scale=1" name="viewport"/>
+
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
+    <title>Fisheye - Photographe </title>
+
+    <link href="./css/photographer.css" rel="stylesheet"/>
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+          referrerpolicy="no-referrer" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
-    <title>Fisheye - photographe </title>
   </head>
+
   <body>
-    <header>
-      <img src="assets/images/logo.png" class="logo" />
-    </header>
-    <main id="main">
-      <div class="photograph-header">
-        <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+    <header aria-label="header with logo">
+      <div class="header_content">
+        <!-- <a href="/" aria-label="“Fisheye Home page"> -->
+        <a href="https://engy-dev.github.io/website-photographe/" aria-label="“Fisheye Home page">
+          <img alt="logo site web" class="logo" src="./assets/images/logo.png"/>
+        </a>
       </div>
+    </header>
+
+    <main id="main" aria-label="main banner + gallery" aria-hidden="false">
+      <section class="photographer_page">
+
+        <div class="photographer_header">
+          <div id="photographer_infos_banner" class="photographer_infos_banner"></div>
+          <div class="contact_btn_banner"></div>
+          <div id="image_banner" class="image_banner"></div>
+        </div>
+        <div class="photographer_body">
+          <div class="filters"> 
+            <label for="filter-select">Trier par </label>
+            <select name="filter" id="filter-select" aria-label="Trier par">
+              <option class="filter-option" value="likes">Popularité</option>
+              <option class="filter-option" value="date">Date</option>
+              <option class="filter-option" value="title">Titre</option>
+            </select>
+          </div>
+          <div class="gallery" aria-live="polite"></div>
+        </div>
+
+        <div class="totals-photographer">
+          <div class="likes"></div>
+          <div class="price"></div>
+        </div>
+      </section>
     </main>
-    <div id="contact_modal">
-			<div class="modal">
-				<header>
-          <h2>Contactez-moi</h2>
-          <img src="assets/icons/close.svg" onclick="closeModal()" />
-        </header>
-				<form>
-					<div>
-						<label>Prénom</label>
-						<input />
-					</div>
-          <button class="contact_button">Envoyer</button>
-				</form>
-			</div>
-		</div>
-    <script src="/scripts/pages/photographer.js"></script>
-    <script src="/scripts/utils/contactForm.js"></script>
+
+    <!-- Pages -->
+    <script type="module" src="./scripts/pages/photographePage.js"></script>
   </body>
 </html>
