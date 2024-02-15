@@ -1,76 +1,164 @@
-#contact_modal {
-    display: none;
+@import "style.css";
+@import "modal_contact.css";
+
+header .header_content {
+  justify-content: start !important;
 }
 
-.photograph-header {
-    background-color: #FAFAFA;
-    height: 300px;
-    margin: 0 100px;
+.photographer_section {
+  margin: auto;
+  max-width: 1400px;
 }
 
-.contact_button {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    padding: 11px;
-    width: 170px;
-    height: 70px;
-    border: none;
-    background-color: #901C1C;
-    border-radius: 5px;
-    cursor: pointer;
+.photographer_header {
+  display: flex;
+  flex: 0 0 300px;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2.5rem;
+  margin: 3rem 0;
+  align-items: center;
+  background-color: var(--color-light);
 }
-
-.modal {
-    border-radius: 5px;
-    background-color: #DB8876;
-    width: 50%;
-    display: flex;
+@media screen and (max-width: 800px) {
+  .photographer_header {
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 35px;
-    margin: auto;
+    padding: 0;
+    margin: 3rem 0;
+  }
 }
 
-.modal header {
-    justify-content: space-between;
+.photographer_header :is(.photographer_infos, .contact_button, .image) {
+  margin: 1rem 0;
+}
+.photographer_header .banner_name {
+  color: var(--color-second);
+  font-size: 3rem;
+}
+.photographer_header .banner_city {
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  color: var(--color-primary);
+}
+.photographer_header .banner_tagline {
+  color: var(--color-grey);
+}
+.photographer_header img {
+  border-radius: 200px;
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+.photographer_body .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.card-container {
+  width: 30%;
+}
+@media screen and (max-width: 1024px) {
+  .card-container {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card-container {
     width: 100%;
+  }
 }
 
-.modal header img {
-    cursor: pointer;
+
+
+
+
+
+
+
+
+.photographer_body .gallery .card {
+  display: flex;
+  flex-direction: column;
+  padding: 0.3rem;
+  /* width: 100%; */
+  border-radius: 8px;
+}
+.photographer_body .gallery :is(img, video) {
+  align-self: center;
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-.modal header h2 {
-    font-size: 64px;
-    font-weight: normal;
-    text-align: center;
+.photographer_body .gallery .legend {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-form {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
+.photographer_body .gallery .legend :nth-child(1) {
+  font-size: 1.4rem;
+  font-weight: 100;
+  margin: 1rem 0;
+  color: var(--color-primary);
+  max-width: 80%;
+}
+.photographer_body .gallery .legend :nth-child(2) span {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  color: var(--color-primary);
+}
+.photographer_body .gallery .legend :nth-child(2) i {
+  cursor: pointer;
+  color: transparent;
+  -webkit-background-clip: text;
+  /*-moz-background-clip: text;*/
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px var(--color-primary);
+}
+.liked {
+  -webkit-text-fill-color: var(--color-primary) !important;
 }
 
-form label {
-    color: #312E2E;
-    font-size: 36px;
-}
 
-form div {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: self-start;
-    margin-bottom: 26px;
-}
 
-form input {
-    width: 100%;
-    height: 68px;
-    border: none;
-    border-radius: 5px;
+
+
+
+.photographer_page {
+  position: relative;
+  max-width: var(--maxW);
+  padding-bottom: 3rem;
+}
+.photographer_page .totals-photographer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  right: 10%;
+  padding: 1rem;
+  font-weight: 700;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--color-second);
+}
+.totals-photographer .likes, .price {
+  margin: 0 1rem;
 }
