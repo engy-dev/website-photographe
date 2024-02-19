@@ -21,9 +21,7 @@ export default function FocusTrap(element) {
     if (!isTabPressed) return;
 
     /*
-      * If shift is pressed + tabbing,
-      * focus the last focusable element.
-      * else, focus the first available one.
+      * If shift is pressed + tabbing, focus the last focusable element. else, focus the first available one.
       */
     if (e.shiftKey){
       if (document.activeElement === firstFocusable) {
