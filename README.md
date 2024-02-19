@@ -1,6 +1,4 @@
-# Base de code du projet P6 - Parcours Front-end
+# Ceci fait partie du programme Openclassrooms Js, j'ai entièrement réalisé ce site à partir de zéro à l'exception d'un seul fichier js. 
 
-## Démarrer le projet
-
-Rien à installer ici, il suffit d'ouvrir le fichier `index.html`.
+## <a href="https://engy-dev.github.io/website-photographe/"> Voila la site en ligne </a>
 
