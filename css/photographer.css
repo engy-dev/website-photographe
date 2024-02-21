@@ -9,6 +9,10 @@ header .header_content {
   margin: auto;
   max-width: 1400px;
 }
+.photographer_section a:focus ~ .article_head{
+  outline: none;
+  box-shadow: 0 0 0 1px white, 0 0 0 3px var(--color-primary);
+}
 
 .photographer_header {
   display: flex;

@@ -81,7 +81,7 @@ select {
 
 
 
-:is(div, button, a, select, img, video, i):focus {
+:is(div, button, select, img, video, i):focus {
   outline: none;
   box-shadow: 0 0 0 1px white, 0 0 0 3px var(--color-primary);
 }
