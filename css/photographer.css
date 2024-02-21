@@ -9,7 +9,7 @@ header .header_content {
   margin: auto;
   max-width: 1400px;
 }
-.photographer_section .article_head:focus-within {
+.article_head:focus-within {
   box-shadow: 0 0 0 1px white, 0 0 0 3px var(--color-primary);
 }
 
