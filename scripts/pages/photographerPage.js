@@ -107,12 +107,19 @@ class PhotographerManage extends PhotographerPage {
   getFilter(sortBy) {
     this.photographer.medias = this.photographer.medias.sort(
       // Compare two elements of the array
-      (firstElement, secondElement) =>
+      (firstElement, secondElement) => {
         // If the first element is greater than the second, return 1 (true)
-        secondElement[sortBy] > firstElement[sortBy] ? 1 : -1
-    )
+        if (sortBy === 'date') {
+          return new Date(secondElement.date) - new Date(firstElement.date);
+        } else {
+          return secondElement[sortBy] > firstElement[sortBy] ? 1 : -1;
+        }
+      }
+    );
     // Reverse the array if sortBy === "title"
-    sortBy === "title" && this.photographer.medias.reverse()
+    if (sortBy === "title") {
+      this.photographer.medias.reverse();
+    }
     // console.log(this.photographer.medias);
   }
 
