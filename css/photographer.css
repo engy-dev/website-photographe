@@ -10,9 +10,15 @@ header .header_content {
   max-width: 1400px;
 }
 .article_head:focus-within {
-  box-shadow: 0 0 0 1px white, 0 0 0 3px var(--color-primary);
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
+.article_head.active:focus-within,
+.article_head.active:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
 .photographer_header {
   display: flex;
   flex: 0 0 300px;
