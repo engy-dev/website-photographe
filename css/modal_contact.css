@@ -31,7 +31,14 @@
   margin: auto;
 }
 
-
+.form-header {
+  justify-content: flex-start;
+  display: flex;
+}
+span.contact_name {
+  display: flex;
+  font-size: inherit;
+}
 
 
 .contact-container form, .form-footer {
