@@ -5,7 +5,7 @@
 export default function FocusTrap(element) {
   // console.log(element);
   const focusableElements = element.querySelectorAll(
-    'video, a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select, h1, p, span'
+    'video, a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select, h1, h2, p, span'
   );
 
   // Loop focusable elements
