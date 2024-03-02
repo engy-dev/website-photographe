@@ -9,15 +9,9 @@ header .header_content {
   margin: auto;
   max-width: 1400px;
 }
-.article_head:focus-within {
-  outline: 2px solid var(--color-primary) !important;
-  outline-offset: 2px;
-}
-
-.article_head.active:focus-within,
-.article_head.active:focus {
-  outline: 2px solid var(--color-primary) !important;
-  outline-offset: 2px;
+a.artrcle_head_link:focus {
+  outline: solid;
+  outline-color: var(--color-primary);
 }
 .photographer_header {
   display: flex;
