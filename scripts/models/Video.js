@@ -20,7 +20,7 @@ export default class VideoMedia extends Media {
           <source type="video/mp4" src="assets/images/${this.name.replace(' ', '_')}/${this.video}" alt="${this.title}">
         </div>
         <div class="legend">
-          <h2>${this.title}</h2>
+          <h2 tabindex="0">${this.title}</h2>
           <div class="likes-content">
             <span class="likes-${this.id}">${this.likes} </span>
             <i class="fa-solid fa-heart add-like" aria-label="like this video" tabindex="0" role="button"></i>

@@ -9,6 +9,7 @@ function photographerTemplate(data) {
         img.setAttribute("src", picture)
         const h2 = document.createElement( 'h2' );
         h2.textContent = name;
+        h2.setAttribute("tabindex", "0");
         article.appendChild(img);
         article.appendChild(h2);
         return (article);

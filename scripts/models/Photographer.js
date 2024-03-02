@@ -27,9 +27,9 @@ export default class Photographer {
           </a>
           </div>
         <div class="article_body">
-          <h2>${this.name}</h2>
-          <p class="city" aria-label="${this.city}">${this.city}, ${this.country}</p>
-          <p class="tagline" aria-label="${this.tagline}">${this.tagline}</p>
+          <h2 tabindex="0">${this.name}</h2>
+          <p class="city" tabindex="0" aria-label="${this.city}">${this.city}, ${this.country}</p>
+          <p class="tagline" tabindex="0" aria-label="${this.tagline}">${this.tagline}</p>
           <p class="price" aria-label="${this.price}">${this.price}€/jour</p>
         </div>
       </article>
@@ -39,9 +39,9 @@ export default class Photographer {
   createPhotographerBanner() {
     const $_banner = `
       <div class="banner">
-        <h1 class="banner_name">${this.name}</h1>
-        <p class="banner_city">${this.city}, ${this.country}</p>
-        <span class="banner_tagline">${this.tagline}</span>
+        <h1 class="banner_name" tabindex="0">${this.name}</h1>
+        <p class="banner_city" tabindex="0">${this.city}, ${this.country}</p>
+        <span class="banner_tagline" tabindex="0">${this.tagline}</span>
       </div>
       `
     const $_contactBtn = `<button class="contact_btn">Contactez-moi</button>`

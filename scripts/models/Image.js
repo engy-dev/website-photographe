@@ -19,7 +19,7 @@ export default class ImageMedia extends Media {
           <img class="media" tabindex="0" role="button" src="assets/images/${this.name.replace(' ', '_')}/${this.image}" alt="${this.title}" />
         </div>
         <div class="legend">
-          <h2>${this.title}</h2>
+          <h2 tabindex="0">${this.title}</h2>
           <div class="likes-container">
             <span class="likes-${this.id}">${this.likes} </span>
             <i class="fa-solid fa-heart add-like" aria-label="like this image" tabindex="0" role="button"></i>
