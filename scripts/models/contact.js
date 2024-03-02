@@ -28,7 +28,7 @@ export default class ContactModel extends checkContactForm {
     return `
       <div class="contact-container" aria-hidden="true" aria-label="Contact Form" role="dialog">
         <div class="form-header">
-          <h2>Contactez-moi <br /> <span class="contact_name" tabindex="0">${this.name}</span></h2>
+          <h2 tabindex="0">Contactez-moi <br /> <span class="contact_name" tabindex="0">${this.name}</span></h2>
           <button class="close-modal" aria-label="Close dialog"><img src="assets/icons/close.svg" alt="close" /></button>
         </div>
         <form id="myForm" action="" method="POST">
