@@ -7,7 +7,7 @@
  * @param {array} medias - The medias of the photographer
  * @returns {HTMLElement} - The slider
  */
-export class SliderModel {
+export default class SliderModel {
     constructor(data) {
       this.name = data.name
       this.medias = data.medias

@@ -5,7 +5,7 @@ import checkContactForm from "../utils/checkContactForm.js";
   * @description Create contact modal
   * @param {string} name - The photographer name
   **********************************/
-export class ContactModel extends checkContactForm {
+export default class ContactModel extends checkContactForm {
   constructor(name) {
     super()
     this.name = name

@@ -5,7 +5,7 @@
  * @param {array} medias - The medias of said photographer
  * @returns {HTMLElements} - The photographer
  * */
-export class Photographer {
+export default class Photographer {
   constructor(photographer, medias) {
     this.id = photographer.id
     this.name = photographer.name
