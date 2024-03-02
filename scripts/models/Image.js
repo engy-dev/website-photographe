@@ -6,7 +6,7 @@ import { Media } from "./Media.js";
   * @param name - The photographer name string
   * @param data - The photographer media object
   **********************************/
-export default class ImageMedia extends Media {
+export class ImageMedia extends Media {
   constructor(name, data) {
     super(name, data)
     this.image = data.image

@@ -2,7 +2,7 @@
  * Loop through focusable elements then focus on the first one.
  * @param {HTMLElement} element - The element to create the trap for.
  */
-export default function FocusTrap(element) {
+export function FocusTrap(element) {
   // console.log(element);
   const focusableElements = element.querySelectorAll(
     'video, a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select, h1, h2, p, span'

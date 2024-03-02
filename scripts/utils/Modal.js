@@ -5,7 +5,7 @@
  * @param {HTMLElement} children
  * @exports Modal
  */
-export default class Modal {
+export class Modal {
     constructor(children) {
       this.children= children;
       this.modalElement= null;

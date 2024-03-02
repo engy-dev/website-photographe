@@ -27,7 +27,7 @@ class Api {
   * Get photographer data from API
   * @returns {instance} photographers - The photographer instance
   * */
-export default class PhotographersApi extends Api {
+export class PhotographersApi extends Api {
   async getPhotographers() {
     const response = await this.get();
     return response.photographers.map(photographer => new Photographer(photographer));

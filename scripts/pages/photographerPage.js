@@ -23,7 +23,7 @@ function getIdQuery() {
  * @param {string} url - The url of the API
  * @param {object} document - The DOM elements
  */
-export default class PhotographerPage {
+export class PhotographerPage {
   constructor() {
     // Create new instance of PhotographersApi and pass the url for the API
     this.photographersApi = new PhotographersApi('https://engy-dev.github.io/website-photographe/data/photographers.json');

@@ -13,7 +13,7 @@ const emailRegex = /^[a-zA-Z0-9-_.]{2,}@[a-zA-Z0-9]{1,61}\.[a-zA-Z]{2,}$/;
   * @description Modal Events
   * @param name - The photographer name (string)
   **********************************/
-export default class checkContactForm {
+export class checkContactForm {
   constructor(name) {
     this.name = name
     this.form = document.querySelector("#myForm");
