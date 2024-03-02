@@ -6,19 +6,19 @@ import PhotographersApi from "../data/data.js"
  */
 class App {
   constructor() {
-    this.$_photographerSection = document.querySelector('.photographer_section')
+    this._photographerSection = document.querySelector('.photographer_section')
     
-    this.$_photographersApi = new PhotographersApi("https://engy-dev.github.io/website-photographe/data/photographers.json")
+    this._photographersApi = new PhotographersApi("https://engy-dev.github.io/website-photographe/data/photographers.json")
   }
 
   async main() {
-    const $_photographers = await this.$_photographersApi.getPhotographers();
+    const _photographers = await this._photographersApi.getPhotographers();
     let photographerCardsHTML = '';
 
-    $_photographers.forEach(photographer => {
-      const $_photographerCard = photographer.createPhotographerCard();
-      photographerCardsHTML += $_photographerCard;
-      this.$_photographerSection.innerHTML = photographerCardsHTML;
+    _photographers.forEach(photographer => {
+      const _photographerCard = photographer.createPhotographerCard();
+      photographerCardsHTML += _photographerCard;
+      this._photographerSection.innerHTML = photographerCardsHTML;
     });
   }
 }

@@ -26,16 +26,16 @@ function getIdQuery() {
 export default class PhotographerPage {
   constructor() {
     // Create new instance of PhotographersApi and pass the url for the API
-    this.$photographersApi = new PhotographersApi('https://engy-dev.github.io/website-photographe/data/photographers.json');
+    this.photographersApi = new PhotographersApi('https://engy-dev.github.io/website-photographe/data/photographers.json');
     
-    this.$photographerInfos = document.querySelector('#photographer_infos_banner');
-    this.$imageBanner = document.querySelector('#image_banner');
-    this.$contactBtn = document.querySelector('.contact_btn_banner');
-    this.$openContactModal = document.querySelector('.contact_btn');
-    this.$gallery = document.querySelector('.gallery');
-    this.$totals_likes = document.querySelector('.likes');
-    this.$price = document.querySelector('.price');
-    this.$filter = document.querySelector('#filter-select');
+    this.photographerInfos = document.querySelector('#photographer_infos_banner');
+    this.imageBanner = document.querySelector('#image_banner');
+    this.contactBtn = document.querySelector('.contact_btn_banner');
+    this.openContactModal = document.querySelector('.contact_btn');
+    this.gallery = document.querySelector('.gallery');
+    this.totals_likes = document.querySelector('.likes');
+    this.price = document.querySelector('.price');
+    this.filter = document.querySelector('#filter-select');
   }
 
 
@@ -44,7 +44,7 @@ export default class PhotographerPage {
     * Get photographer data from API
     * @returns {object} photographerWithMedias - The photographer with medias
     * */
-    const photographerWithMedias = await this.$photographersApi.getPhotographerWithMedias(getIdQuery())
+    const photographerWithMedias = await this.photographersApi.getPhotographerWithMedias(getIdQuery())
 
     /*
     * Create Photographer Instance
@@ -60,9 +60,9 @@ export default class PhotographerPage {
     * Add event listener on filter
     * @returns {string} photographerEvents.getFilter - The photographer instance
     * */
-    this.$filter.addEventListener('change', () => {
-      // console.log(this.$filter.value);
-      photographerEvents.getFilter(this.$filter.value)
+    this.filter.addEventListener('change', () => {
+      // console.log(this.filter.value);
+      photographerEvents.getFilter(this.filter.value)
       photographerEvents.getCardsMedias()
     })
 
@@ -93,10 +93,10 @@ class PhotographerManage extends PhotographerPage {
   }
 
   getBanner() {
-    const { $_banner, $_contactBtn, $_image } = this.photographer.createPhotographerBanner()
-    this.$photographerInfos.innerHTML = $_banner
-    this.$contactBtn.innerHTML = $_contactBtn
-    this.$imageBanner.innerHTML = $_image
+    const { _banner, _contactBtn, _image } = this.photographer.createPhotographerBanner()
+    this.photographerInfos.innerHTML = _banner
+    this.contactBtn.innerHTML = _contactBtn
+    this.imageBanner.innerHTML = _image
   }
 
   /**
@@ -129,7 +129,7 @@ class PhotographerManage extends PhotographerPage {
    * @returns {object} cardElement - The card element
    * */
   getCardsMedias() {
-    this.$gallery.innerHTML = null;
+    this.gallery.innerHTML = null;
 
     this.photographer.medias.forEach(mediaElement => {
       let cardHTML = '';
@@ -145,7 +145,7 @@ class PhotographerManage extends PhotographerPage {
       cardElement.innerHTML = cardHTML;
 
       this.addLike(cardElement, mediaElement)
-      this.$gallery.appendChild(cardElement);
+      this.gallery.appendChild(cardElement);
     });
 
     /**
@@ -197,11 +197,11 @@ class PhotographerManage extends PhotographerPage {
   getTotals() {
     const counterLikes = this.photographer.totalLikes()
 
-    this.$totals_likes.innerHTML = `
+    this.totals_likes.innerHTML = `
     <span class="total-likes">${parseInt(counterLikes)}</span>
     <i class="fa-solid fa-heart"></i>
     `;
-    this.$price.innerHTML = `
+    this.price.innerHTML = `
     <span>${this.photographer.price}€ / jour</span>
     `;
   }
@@ -286,10 +286,10 @@ class ContactManage extends PhotographerPage {
       FocusTrap(document.querySelector('.modal-container'))
     }
 
-    this.$openContactModal.addEventListener("click", () => {
+    this.openContactModal.addEventListener("click", () => {
       handleSlider()
     })
-    this.$openContactModal.addEventListener("keydown", (e) => {
+    this.openContactModal.addEventListener("keydown", (e) => {
       if (e.key === "e") {
         handleSlider()
       }

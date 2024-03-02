@@ -37,16 +37,16 @@ export default class Photographer {
   }
 
   createPhotographerBanner() {
-    const $_banner = `
+    const _banner = `
       <div class="banner">
         <h1 class="banner_name" tabindex="0">${this.name}</h1>
         <p class="banner_city" tabindex="0">${this.city}, ${this.country}</p>
         <span class="banner_tagline" tabindex="0">${this.tagline}</span>
       </div>
       `
-    const $_contactBtn = `<button class="contact_btn">Contactez-moi</button>`
-    const $_image = `<img src="assets/photographers/${this.portrait}" alt="${this.name}" />`
-    return { $_banner, $_contactBtn, $_image }
+    const _contactBtn = `<button class="contact_btn">Contactez-moi</button>`
+    const _image = `<img src="assets/photographers/${this.portrait}" alt="${this.name}" />`
+    return { _banner, _contactBtn, _image }
   }
 
   /**
