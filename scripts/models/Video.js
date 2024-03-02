@@ -35,7 +35,7 @@ export default class VideoMedia extends Media {
     return `
       <li class="slide" ${currentId === `card-${this.id}` ? 'data-active' : ''}>
         <video tabindex="0" src="assets/images/${this.name.replace(' ', '_')}/${this.video}" controls></video>
-        <p class="slide-title">${this.title}</p>
+        <p class="slide-title" tabindex="0">${this.title}</p>
       </li>
     `;
   }
