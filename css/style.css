@@ -86,3 +86,7 @@ select {
   box-shadow: 0 0 0 1px white, 0 0 0 3px var(--color-primary);
 }
 
+a.artrcle_head_link:focus {
+  outline: solid;
+  outline-color: var(--color-primary);
+}
